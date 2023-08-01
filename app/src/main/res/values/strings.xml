@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">WeatherAssignment</string>
+    <string name="clear_sky">Clear Sky</string>
+    <string name="few_clouds">Few Clouds</string>
+    <string name="scattered_clouds">Scattered Clouds</string>
+    <string name="shower_rain">Shower Rain</string>
+    <string name="rain">Rain</string>
+    <string name="thunderstorm">Thunderstorm</string>
+    <string name="snow">Snow</string>
+    <string name="mist">Mist</string>
+    <string name="details_screen_title">Details</string>
+    <string name="evapotranspiration">Evapotranspiration</string>
+    <string name="uv_index">UV Index</string>
+    <string name="wind">Wind</string>
+    <string name="km_h">%1$s km/h</string>
+    <string name="temperature">%1$s°</string>
+    <string name="weather_screen_title">Weather</string>
+    <string name="retry">retry</string>
+    <string name="retry_again">retry again</string>
+</resources>
