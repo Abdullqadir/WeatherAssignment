@@ -1,19 +1,14 @@
 package com.example.weatherassignment.ui.screens.details_screen
 
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.MoreVert
@@ -22,18 +17,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.weatherassignment.R
 import com.example.weatherassignment.ui.navigation.WEATHER_DETAIL_ARGUMENT
+import com.example.weatherassignment.ui.screens.details_screen.components.DetailsBody
+import com.example.weatherassignment.ui.screens.model.WeatherDataPerDay
 import com.example.weatherassignment.ui.shared.components.DayDetails
 import com.example.weatherassignment.ui.shared.components.TopAppBarComposable
-import com.example.weatherassignment.ui.shared.theme.Keyline24
 import com.example.weatherassignment.ui.shared.theme.WeatherAssignmentTheme
-import com.example.weatherassignment.ui.screens.model.WeatherDataPerDay
-
 
 @Composable
 fun DetailsScreen(
@@ -108,45 +101,10 @@ fun DetailsScreen(
     }
 }
 
-
-@Composable
-fun DetailsBody(
-    modifier: Modifier = Modifier,
-    title: String,
-    value: String,
-) {
-    Row(
-        horizontalArrangement = Arrangement.SpaceBetween,
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(Keyline24)
-    ) {
-        Box(modifier = Modifier.weight(1f)) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.h4.copy(
-                    color = MaterialTheme.colors.onSecondary.copy(alpha = 0.6f),
-                )
-            )
-        }
-        Box(modifier = Modifier.weight(1f)) {
-            Text(
-                text = value,
-                style = MaterialTheme.typography.h3.copy(
-                    color = MaterialTheme.colors.onSecondary,
-                    textAlign = TextAlign.Start
-                ),
-            )
-        }
-    }
-}
-
-// add preview for DetailsScreen
 @Preview
 @Composable
 private fun DetailsScreenPreview() {
-    WeatherAssignmentTheme() {
+    WeatherAssignmentTheme {
         DetailsScreen(navController = rememberNavController())
     }
 }
-
